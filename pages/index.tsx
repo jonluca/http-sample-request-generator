@@ -19,13 +19,16 @@ const Home: NextPage = () => {
     <div className={styles.container}>
       <Head>
         <title>HTTP Request Generator</title>
-        <meta name="description" content="https://github.com/jonluca/http-sample-request-generator" />
+        <meta
+          name="description"
+          content="Generate lots of HTTP requests from your UI, for network monitoring or HAR exports"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">HTTP Request Generator</a>
+          Welcome to <a href="https://github.com/jonluca/http-sample-request-generator">HTTP Request Generator</a>
         </h1>
         <p className={styles.description}>
           Clicking start below will generate all forms of HTTP requests from this page to its server for testing

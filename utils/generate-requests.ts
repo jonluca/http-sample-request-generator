@@ -6,16 +6,13 @@ import {
   POST_METHOD,
   TEST_METHOD_NOT_IN_SPEC,
 } from "./constants";
-import { faker } from "@faker-js/faker/locale/en";
+
+import { v4 as uuid } from "uuid";
+
 export function createRandomData() {
   return {
-    userId: faker.datatype.uuid(),
-    username: faker.internet.userName(),
-    email: faker.internet.email(),
-    avatar: faker.image.avatar(),
-    password: faker.internet.password(),
-    birthdate: faker.date.birthdate().toISOString(),
-    registeredAt: faker.date.past().toISOString(),
+    userId: uuid(),
+    registeredAt: new Date().toISOString(),
   };
 }
 export interface IResult {
@@ -37,7 +34,7 @@ const getFetch = (addResult: (result: IResult) => void) => async (url: string, o
   try {
     const resp = await fetch(url, options);
     const respUrl = new URL(resp.url);
-    addResult({ id: faker.datatype.uuid(), status: resp.status, path: respUrl.pathname });
+    addResult({ id: uuid(), status: resp.status, path: respUrl.pathname });
   } catch (error) {
     return error;
   }

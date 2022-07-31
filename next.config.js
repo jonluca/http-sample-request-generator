@@ -1,5 +1,6 @@
+const withPreact = require("next-plugin-preact");
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+const nextConfig = withPreact({
   reactStrictMode: true,
   swcMinify: true,
   i18n: {
@@ -7,7 +8,7 @@ const nextConfig = {
     defaultLocale: "en",
   },
   productionBrowserSourceMaps: true,
-};
+});
 
 let analyze = Boolean(process.env.ANALYZE);
 if (analyze) {
