@@ -6,8 +6,7 @@ import {
   POST_METHOD,
   TEST_METHOD_NOT_IN_SPEC,
 } from "./constants";
-import { faker } from "@faker-js/faker";
-
+import { faker } from "@faker-js/faker/locale/en";
 export function createRandomData() {
   return {
     userId: faker.datatype.uuid(),

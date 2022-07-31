@@ -56,15 +56,6 @@
   font-size: 1.5rem;
 }
 
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New,
-    monospace;
-}
-
 .grid {
   display: flex;
   align-items: center;
@@ -108,12 +99,6 @@
   margin: 0;
 }
 
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
 .statusSuccess {
   padding: 4px;
   background: rgba(97, 206, 97, 0.5);
@@ -155,9 +140,6 @@
   .card,
   .footer {
     border-color: #222;
-  }
-  .code {
-    background: #111;
   }
   .logo img {
     filter: invert(1);
