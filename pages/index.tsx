@@ -15,6 +15,7 @@ const Home: NextPage = () => {
       return [...old, result];
     });
   };
+  const hasResults = results.length > 0;
   return (
     <div className={styles.container}>
       <Head>
@@ -53,7 +54,8 @@ const Home: NextPage = () => {
             <h2>Start &rarr;</h2>
           </button>
           <div className={styles.resultContainer}>
-            {results.length > 0 &&
+            {hasResults && <span>{results.length} requests</span>}
+            {hasResults &&
               results.map((result) => (
                 <div key={result.id} className={styles.result}>
                   <span className={result.status > 300 ? styles.statusFail : styles.statusSuccess}>
