@@ -36,7 +36,7 @@ const Home: NextPage = () => {
         </p>
         <span>
           <input name={"full"} id={"full"} type={"checkbox"} checked={full} onChange={() => setFull((v) => !v)} />
-          <label htmlFor={"full"}>Full suite (All status codes)</label>
+          <label htmlFor={"full"}>Full suite (All status codes & methods for each status code)</label>
         </span>
         <span>
           <input name={"auth"} id={"auth"} type={"checkbox"} checked={auth} onChange={() => setAuth((v) => !v)} />

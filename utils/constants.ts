@@ -2,7 +2,7 @@ import STATUS_CODES from "http-response-status-code";
 
 export const GET_METHOD = "GET";
 export const POST_METHOD = "POST";
-export const KNOWN_METHODS = ["DELETE", GET_METHOD, "HEAD", "OPTIONS", POST_METHOD, "PUT"];
+export const KNOWN_METHODS = ["DELETE", GET_METHOD, "HEAD", "OPTIONS", POST_METHOD, "PUT", "PATCH"];
 export const TEST_METHOD_NOT_IN_SPEC = "TEST_METHOD_NOT_IN_SPEC";
 export const MOST_COMMON_HTTP_STATUS_CODES = [
   STATUS_CODES.OK,

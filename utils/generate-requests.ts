@@ -50,11 +50,15 @@ export const generateRequests = async ({ full, auth, addResult }: IOptions) => {
     const value = createRandomData();
     const params = new URLSearchParams(value);
     const formData = getFormData(value);
-
     await safeFetch(`/api/status/${status}`, { method: GET_METHOD });
     await safeFetch(`/api/status/${status}/query-params?${params.toString()}`, { method: GET_METHOD });
     await safeFetch(`/api/status/${status}/json-body`, { method: POST_METHOD, body: JSON.stringify(value) });
     await safeFetch(`/api/status/${status}/form-data`, { method: POST_METHOD, body: formData });
+    if (full) {
+      for (const method of KNOWN_METHODS) {
+        await safeFetch(`/api/status/${status}methods/${method.toLowerCase()}`, { method });
+      }
+    }
   }
 
   if (auth) {
